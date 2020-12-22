@@ -5,6 +5,7 @@
 ## SavedVariables: AnalogueClock_Settings
 ## LoadManagers: AddonLoader, LoadIT
 ## X-LoadOn-Always: delayed
+## X-Curse-Project-ID: 30511
 
 ## Libraries
 Libs\embed.xml
