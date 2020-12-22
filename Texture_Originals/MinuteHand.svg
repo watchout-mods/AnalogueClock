@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   id="svg3949"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="MinuteHand.svg"
+   inkscape:export-filename="D:\Games\World of Warcraft\Interface\AddOns\AnalogueClock\Textures\MinuteHand.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3951">
+    <filter
+       id="filter3988"
+       inkscape:label="DropShadow"
+       width="3"
+       height="1.6000000000000001"
+       x="-1"
+       y="-0.29999999999999999">
+      <feFlood
+         id="feFlood4506"
+         in="SourceGraphic"
+         result="result1" />
+      <feComposite
+         id="feComposite4502"
+         in2="result1"
+         operator="in"
+         in="SourceAlpha" />
+      <feMorphology
+         id="feMorphology4516"
+         operator="dilate"
+         radius="1" />
+      <feGaussianBlur
+         stdDeviation="5"
+         id="feGaussianBlur4508"
+         result="result2" />
+      <feMerge
+         id="feMerge4510">
+        <feMergeNode
+           inkscape:collect="always"
+           id="feMergeNode4512"
+           in="result2" />
+        <feMergeNode
+           inkscape:collect="always"
+           id="feMergeNode4514"
+           in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="76.557387"
+     inkscape:cy="160.4079"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-page="false"
+     inkscape:snap-to-guides="true"
+     inkscape:snap-bbox="false"
+     inkscape:object-nodes="false"
+     inkscape:object-paths="false"
+     inkscape:snap-nodes="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:window-width="1127"
+     inkscape:window-height="705"
+     inkscape:window-x="100"
+     inkscape:window-y="100"
+     inkscape:window-maximized="0"
+     inkscape:snap-global="false">
+    <sodipodi:guide
+       orientation="0.70710678,0.70710678"
+       position="0,256"
+       id="guide3957" />
+    <sodipodi:guide
+       orientation="-0.70710678,0.70710678"
+       position="256,256"
+       id="guide3959" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="128,128"
+       id="guide3963" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3954">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-796.36218)"
+     style="display:inline">
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#f75700;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3988)"
+       d="m 121.15625,839.64343 0,84.9375 6.84375,28 6.84375,-28 0,-84.9375 -6.84375,-34 z"
+       id="path3981"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Hide"
+     style="display:none">
+    <path
+       style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline"
+       d="m 123.15625,15.28125 0,132.9375 c -0.0166,0.16328 0,0.33234 0,0.5 0,2.68253 2.16122,4.84375 4.84375,4.84375 2.68253,0 4.84375,-2.16122 4.84375,-4.84375 0,-0.16766 0.0166,-0.33672 0,-0.5 l 0,-132.9375 z"
+       id="rect3961"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsssccc"
+       inkscape:transform-center-y="-43.578125" />
+  </g>
+</svg>

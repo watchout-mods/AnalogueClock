@@ -1,0 +1,12 @@
+## Interface: 90002
+## Title: AnalogueClock
+## Version: @project-version@
+## Notes: Analogue clock for the minimap |cFFAAAAAAby watchout@curse.com|r
+## SavedVariables: AnalogueClock_Settings
+## LoadManagers: AddonLoader, LoadIT
+## X-LoadOn-Always: delayed
+
+## Libraries
+Libs\embed.xml
+
+AnalogueClock.lua

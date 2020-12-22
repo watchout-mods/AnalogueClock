@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="0.91 r13725"
+   version="1.1"
+   id="svg2866"
+   height="4000"
+   width="2000"
+   sodipodi:docname="Face (Template).svg"
+   inkscape:export-filename="D:\Games\World of Warcraft\Interface\AddOns\AnalogueClock\Textures\Goldwatch_Glass.png"
+   inkscape:export-xdpi="23.040001"
+   inkscape:export-ydpi="23.040001">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.28"
+     inkscape:cx="756.50714"
+     inkscape:cy="3169.2064"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer4"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-page="true"
+     inkscape:object-paths="false"
+     inkscape:window-width="1482"
+     inkscape:window-height="1000"
+     inkscape:window-x="2063"
+     inkscape:window-y="28"
+     inkscape:window-maximized="0"
+     inkscape:snap-to-guides="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-global="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:object-nodes="false"
+     inkscape:snap-bbox="false"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:snap-nodes="true"
+     inkscape:snap-intersection-paths="true">
+    <sodipodi:guide
+       orientation="1,0"
+       position="500,0"
+       id="guide4507"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       orientation="0.70710678,0.70710678"
+       position="0,1000"
+       id="guide4545"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       orientation="-0.70710678,0.70710678"
+       position="0,0"
+       id="guide4549"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,3000"
+       orientation="0,1"
+       id="guide4445"
+       inkscape:label=""
+       inkscape:color="rgb(0,255,0)" />
+    <sodipodi:guide
+       position="0,2000"
+       orientation="0,1"
+       id="guide4447"
+       inkscape:label=""
+       inkscape:color="rgb(0,255,0)" />
+    <sodipodi:guide
+       position="0,1000"
+       orientation="0,1"
+       id="guide4449"
+       inkscape:label=""
+       inkscape:color="rgb(0,255,0)" />
+    <sodipodi:guide
+       position="0,1000"
+       orientation="-0.70710678,0.70710678"
+       id="guide4451"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,2000"
+       orientation="0.70710678,0.70710678"
+       id="guide4453" />
+    <sodipodi:guide
+       position="0,3000"
+       orientation="0.70710678,0.70710678"
+       id="guide4457" />
+    <sodipodi:guide
+       position="100,0"
+       orientation="1,0"
+       id="guide4461"
+       inkscape:label=""
+       inkscape:color="rgb(230,170,0)" />
+    <sodipodi:guide
+       position="900,0"
+       orientation="1,0"
+       id="guide4463"
+       inkscape:label=""
+       inkscape:color="rgb(230,170,0)" />
+    <sodipodi:guide
+       position="0,2000"
+       orientation="-0.70710678,0.70710678"
+       id="guide4465" />
+    <sodipodi:guide
+       position="100,3900"
+       orientation="0,1"
+       id="guide4467"
+       inkscape:label=""
+       inkscape:color="rgb(230,170,0)" />
+    <sodipodi:guide
+       position="100,3100"
+       orientation="0,1"
+       id="guide4469"
+       inkscape:label=""
+       inkscape:color="rgb(230,170,0)" />
+    <sodipodi:guide
+       position="0,3825"
+       orientation="0,1"
+       id="guide4486"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,3175"
+       orientation="0,1"
+       id="guide4488"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="175,3825"
+       orientation="1,0"
+       id="guide4490" />
+    <sodipodi:guide
+       position="825,3825"
+       orientation="1,0"
+       id="guide4492" />
+    <sodipodi:guide
+       position="500,3500"
+       orientation="0,1"
+       id="guide4498" />
+    <sodipodi:guide
+       position="500,3500"
+       orientation="-0.5,0.8660254"
+       id="guide4500"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="500,3500"
+       orientation="-0.8660254,0.5"
+       id="guide4502"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="500,3500"
+       orientation="-0.8660254,-0.5"
+       id="guide4504"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="500,3500"
+       orientation="-0.5,-0.8660254"
+       id="guide4506"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid4514" />
+    <sodipodi:guide
+       position="-2000,3500"
+       orientation="1,0"
+       id="guide4624"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="-2000,5000"
+       orientation="0,1"
+       id="guide4626"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="2000,5000"
+       orientation="1,0"
+       id="guide4628"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2868">
+    <linearGradient
+       id="linearGradient4071">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop4073" />
+      <stop
+         id="stop4083"
+         offset="0.91478354"
+         style="stop-color:#200000;stop-opacity:0.74901962;" />
+      <stop
+         id="stop4081"
+         offset="0.93877041"
+         style="stop-color:#f66915;stop-opacity:0;" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop4075" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4477">
+      <stop
+         style="stop-color:#fff0d1;stop-opacity:0.51955307;"
+         offset="0"
+         id="stop4479" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.17877094;"
+         offset="0.56992531"
+         id="stop4481" />
+      <stop
+         style="stop-color:#d0d0d0;stop-opacity:0.05586592;"
+         offset="0.90927982"
+         id="stop4483" />
+      <stop
+         id="stop4485"
+         offset="1"
+         style="stop-color:#d0d0d0;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3941">
+      <stop
+         style="stop-color:#531e00;stop-opacity:0;"
+         offset="0"
+         id="stop3943" />
+      <stop
+         id="stop3945"
+         offset="0.5"
+         style="stop-color:#391500;stop-opacity:0.74301678;" />
+      <stop
+         style="stop-color:#531e00;stop-opacity:0;"
+         offset="1"
+         id="stop3947" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3881">
+      <stop
+         id="stop3883"
+         offset="0"
+         style="stop-color:#ff8b51;stop-opacity:1;" />
+      <stop
+         id="stop3885"
+         offset="1"
+         style="stop-color:#e40000;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3841">
+      <stop
+         style="stop-color:#00ff00;stop-opacity:1;"
+         offset="0"
+         id="stop3843" />
+      <stop
+         style="stop-color:#00cd00;stop-opacity:1;"
+         offset="1"
+         id="stop3845" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3702">
+      <stop
+         style="stop-color:#ffa200;stop-opacity:1;"
+         offset="0"
+         id="stop3704" />
+      <stop
+         id="stop3710"
+         offset="0.86666667"
+         style="stop-color:#bb7700;stop-opacity:1;" />
+      <stop
+         style="stop-color:#784c00;stop-opacity:1;"
+         offset="1"
+         id="stop3706" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 500 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1000 : 500 : 1"
+       inkscape:persp3d-origin="500 : 333.33333 : 1"
+       id="perspective116" />
+    <linearGradient
+       id="linearGradient5201">
+      <stop
+         id="stop5213"
+         offset="0"
+         style="stop-color:#d0d0d0;stop-opacity:0.8745098;" />
+      <stop
+         id="stop5211"
+         offset="0.77999997"
+         style="stop-color:#d0d0d0;stop-opacity:0.35754189;" />
+      <stop
+         id="stop5209"
+         offset="0.83999997"
+         style="stop-color:#d0d0d0;stop-opacity:0.05586592;" />
+      <stop
+         style="stop-color:#d0d0d0;stop-opacity:0.12290503;"
+         offset="1"
+         id="stop5205" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5701">
+      <stop
+         style="stop-color:#ffe0b2;stop-opacity:1;"
+         offset="0"
+         id="stop5703" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop5705" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5673">
+      <stop
+         id="stop5675"
+         offset="0"
+         style="stop-color:#fff4b2;stop-opacity:1;" />
+      <stop
+         id="stop5677"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:0.30167598;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5641">
+      <stop
+         id="stop5643"
+         offset="0"
+         style="stop-color:#f6ffc0;stop-opacity:0;" />
+      <stop
+         style="stop-color:#f7fdd3;stop-opacity:1;"
+         offset="0.5"
+         id="stop5649" />
+      <stop
+         id="stop5645"
+         offset="1"
+         style="stop-color:#e8e7dd;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5608">
+      <stop
+         id="stop5610"
+         offset="0"
+         style="stop-color:#ffa200;stop-opacity:1;" />
+      <stop
+         id="stop5612"
+         offset="1"
+         style="stop-color:#ffff00;stop-opacity:0;" />
+    </linearGradient>
+    <clipPath
+       id="clipPath5886"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path5888"
+         d="M 500,0 C 223.85763,0 0,223.85763 0,500 c 0,276.14237 223.85763,500 500,500 276.14237,0 500,-223.85763 500,-500 C 1000,223.85763 776.14237,0 500,0 Z M 616.90625,186.03125 C 727.20476,225.98587 809.99048,323.31786 829.25,441.96875 l -71.78125,11.75 C 742.47571,361.3192 678.02253,285.51636 592.125,254.40625 l 24.78125,-68.375 z M 505,289.71875 c 9.9346,0 19.69222,0.70404 29.25,2.0625 0.0423,0.006 0.0827,0.0253 0.125,0.0312 2.99882,0.51996 10.56298,4.49513 9.53125,9.625 l -0.84375,4.21875 -2.96875,14.6875 -1.34375,6.78125 -0.0312,0.0937 c -0.93138,4.35736 -5.96931,9.99445 -13.46875,9.21875 -0.11558,-0.0119 -0.22878,-0.0213 -0.34375,-0.0312 -6.51962,-0.81611 -13.16624,-1.25 -19.90625,-1.25 -88.28027,0 -159.84375,71.56348 -159.84375,159.84375 0,88.28028 71.56348,159.84375 159.84375,159.84375 0.84843,0 1.68631,-0.0181 2.53125,-0.0312 0.0211,5e-5 0.0414,6e-5 0.0625,0 9.79196,-0.0256 16.45842,1.01004 17.9375,13.5 0.002,0.0208 -0.003,0.0418 0,0.0625 l 1.875,15.71875 c 10e-4,0.0109 -10e-4,0.0203 0,0.0312 0.88939,7.5104 -2.19989,15.30705 -12.375,15.90625 -3.33051,0.1606 -6.66198,0.25 -10.03125,0.25 -113.38064,5e-5 -205.2813,-91.9006 -205.2813,-205.2812 0,-113.38059 91.90066,-205.28125 205.28125,-205.28125 z m -205.53125,357.625 C 346.08502,710.13047 420.79688,750.8125 505,750.8125 c 53.71839,0 103.5589,-16.58195 144.71875,-44.875 l 41.15625,59.96875 c -52.86208,36.33949 -116.87819,57.625 -185.875,57.625 -108.14067,0 -204.07102,-52.24528 -263.9375,-132.875 l 58.40625,-43.3125 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <filter
+       id="filter4566"
+       inkscape:label="Zahnrad">
+      <feGaussianBlur
+         stdDeviation="5.4996470588235296"
+         id="feGaussianBlur4578"
+         result="result1" />
+      <feTurbulence
+         id="feTurbulence4618"
+         type="turbulence"
+         result="result9"
+         baseFrequency="0.061162079510703363 0.083180428134556575"
+         numOctaves="2"
+         seed="64" />
+      <feGaussianBlur
+         stdDeviation="3.1469411764705884"
+         id="feGaussianBlur5165" />
+      <feColorMatrix
+         id="feColorMatrix4626"
+         type="saturate"
+         values="0" />
+      <feComposite
+         id="feComposite4630"
+         operator="arithmetic"
+         in2="SourceGraphic"
+         result="result11"
+         k1="0"
+         k3="0.52"
+         k4="0.21"
+         k2="0.99041534" />
+      <feBlend
+         blend="normal"
+         id="feBlend5163"
+         in2="result1"
+         mode="multiply"
+         result="result12" />
+      <feComposite
+         id="feComposite4622"
+         in2="SourceGraphic"
+         result="result10"
+         operator="in"
+         in="result12" />
+      <feMorphology
+         id="feMorphology5167"
+         in="result10"
+         operator="erode"
+         radius="3.7999999999999998"
+         result="result13" />
+      <feFlood
+         id="feFlood5189"
+         in="SourceGraphic"
+         result="result17" />
+      <feComposite
+         id="feComposite5183"
+         in2="SourceAlpha"
+         in="result17"
+         operator="atop"
+         result="result18" />
+      <feMorphology
+         id="feMorphology5185"
+         radius="5"
+         in="result18"
+         operator="dilate" />
+      <feGaussianBlur
+         stdDeviation="38.375467625899283"
+         id="feGaussianBlur5175"
+         result="result14" />
+      <feMerge
+         id="feMerge5169"
+         result="result15">
+        <feMergeNode
+           inkscape:collect="always"
+           id="feMergeNode5181"
+           in="result14" />
+        <feMergeNode
+           inkscape:collect="always"
+           id="feMergeNode5191"
+           in="result10" />
+        <feMergeNode
+           inkscape:collect="always"
+           id="feMergeNode5193"
+           in="result13" />
+      </feMerge>
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3702"
+       id="radialGradient3722"
+       gradientUnits="userSpaceOnUse"
+       cx="500"
+       cy="498.5"
+       fx="500"
+       fy="498.5"
+       r="25" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3702"
+       id="radialGradient3725"
+       gradientUnits="userSpaceOnUse"
+       cx="500"
+       cy="498.5"
+       fx="500"
+       fy="498.5"
+       r="25"
+       gradientTransform="matrix(1.5939697,0,0,1.5939697,-296.98485,-296.0939)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3702"
+       id="radialGradient3875"
+       gradientUnits="userSpaceOnUse"
+       cx="500"
+       cy="498.5"
+       fx="500"
+       fy="498.5"
+       r="25" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4071"
+       id="radialGradient4079"
+       cx="505"
+       cy="495"
+       fx="505"
+       fy="495"
+       r="384"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.70710678,-0.70710678,0.69531251,0.69531251,-196.26861,507.90924)" />
+    <filter
+       inkscape:collect="always"
+       id="filter5090">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="30.385388"
+         id="feGaussianBlur5092" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5193">
+      <path
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m -43.131856,-13.3644 0,961.54188 961.541886,0 0,-961.54188 -961.541886,0 z M 442.44679,82.789788 c 209.76734,0 379.80905,170.041712 379.80905,379.809042 0,209.76733 -170.04171,379.80904 -379.80905,379.80904 -209.76733,0 -379.809039,-170.04171 -379.809039,-379.80904 0,-209.76733 170.041709,-379.809042 379.809039,-379.809042 z"
+         id="path5195"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata2871">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="display:inline"
+     inkscape:label="Background"
+     id="layer4"
+     inkscape:groupmode="layer"
+     transform="translate(0,3000)">
+    <rect
+       y="-3323.3806"
+       x="2066.6946"
+       height="4782.4756"
+       width="3175.9197"
+       id="Transparency_Tester"
+       style="fill:#000000;fill-opacity:0.56756759;stroke:none"
+       inkscape:label="#rect5730">
+      <desc
+         id="desc4548">Use this to test effect of transparency in your clock-face</desc>
+    </rect>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4558"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:125%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion4560"><rect
+           id="rect4562"
+           width="1101.0663"
+           height="540.61017"
+           x="-1424.3151"
+           y="-40.610176"
+           style="font-size:70px" /></flowRegion><flowPara
+         id="flowPara4564" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4566"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:125%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion4568"><rect
+           id="rect4570"
+           width="1011.1678"
+           height="587.05676"
+           x="-1111.1678"
+           y="312.94321"
+           style="font-size:80px" /></flowRegion><flowPara
+         id="flowPara4572" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4574"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:125%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-844.04659,-4343.985)"><flowRegion
+         id="flowRegion4576"><rect
+           id="rect4578"
+           width="3999.9998"
+           height="1000"
+           x="-1155.9534"
+           y="343.98499" /></flowRegion><flowPara
+         id="flowPara4582">This template is meant to help creating a new clock-face. I'm using Inkscape to design them to achieve precise graphics through vectors.</flowPara><flowPara
+         id="flowPara4584">You may want to use a different (vector-) program, BUT things like guides will probably be missing for you then. Inkscape is free and Open Source, so... You should at least read this Template with it.</flowPara><flowPara
+         id="flowPara4598" /><flowPara
+         id="flowPara4600">This texture is a combination of multiple textures for Analogue-Clock. If you display &quot;Guides&quot; in Inkscape, you will see many helper guides. The green ones show where the textures are separated. The yellow ones show the normally visible area (use the rest of the space for shadows, etc.) the blue ones are &quot;other&quot;. </flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4586"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:125%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-143.91595,-2934.7426)"><flowRegion
+         id="flowRegion4588"><rect
+           id="rect4590"
+           width="2000"
+           height="492.46658"
+           x="-1856.0841"
+           y="342.27609"
+           style="text-align:end;text-anchor:end" /></flowRegion><flowPara
+         id="flowPara4594"
+         style="font-weight:bold">This is the Clock face or Background</flowPara><flowPara
+         style="font-weight:normal"
+         id="flowPara4277">This will be put on the BACKGROUND layer</flowPara></flowRoot>    <flowRoot
+       transform="translate(-143.91595,-1952.5997)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:125%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4604"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4606"><rect
+           y="388.70465"
+           x="-1856.0841"
+           height="563.89508"
+           width="2000"
+           id="rect4608"
+           style="text-align:end;text-anchor:end" /></flowRegion><flowPara
+         id="flowPara4610"
+         style="font-weight:bold">This is the Hour &quot;hand&quot;</flowPara><flowPara
+         id="flowPara4620">The texture default orientation is for 12 o'clock. So vertical to the top. This applies to all &quot;hands&quot;</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4612"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:125%;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-165.34452,-916.88541)"><flowRegion
+         id="flowRegion4614"><rect
+           style="text-align:end;text-anchor:end"
+           id="rect4616"
+           width="2000"
+           height="574.60944"
+           x="-1834.6555"
+           y="342.27609" /></flowRegion><flowPara
+         id="flowPara4618"
+         style="font-weight:bold">This is the Minute &quot;hand&quot;</flowPara><flowPara
+         id="flowPara4622">It behaves exactly like the hour hand.</flowPara></flowRoot>  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Shadow"
+     style="display:none"
+     transform="translate(0,3000)">
+    <circle
+       transform="matrix(1.0399963,0,0,1.0399963,44.856971,13.898927)"
+       id="path5732"
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter5090)"
+       inkscape:export-filename="D:\Games\World of Warcraft\Interface\AddOns\AnalogueClock\Textures\Goldwatch.png"
+       inkscape:export-xdpi="26.24"
+       inkscape:export-ydpi="26.24"
+       clip-path="url(#clipPath5193)"
+       cx="442.44681"
+       cy="462.59885"
+       r="379.81735" />
+  </g>
+  <g
+     style="display:inline"
+     inkscape:label="Basis"
+     id="layer2"
+     inkscape:groupmode="layer"
+     transform="translate(0,3000)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Ebene"
+     style="display:inline"
+     transform="translate(0,3000)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer13"
+     inkscape:label="Face"
+     style="display:inline"
+     transform="translate(0,3000)" />
+  <g
+     style="display:inline"
+     inkscape:label="Ring"
+     id="layer3"
+     inkscape:groupmode="layer"
+     transform="translate(0,3000)">
+    <circle
+       inkscape:export-ydpi="26.24"
+       inkscape:export-xdpi="26.24"
+       inkscape:export-filename="D:\Games\World of Warcraft\Interface\AddOns\AnalogueClock\Textures\Goldwatch.png"
+       style="display:inline;opacity:0.75;fill:#ffffff;fill-opacity:1;stroke:none"
+       id="path5078"
+       cx="500"
+       cy="-2500"
+       r="387.5" />
+    <path
+       style="opacity:0.65;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="M 500,103.57227 C 281.05855,103.57227 103.57227,281.0586 103.57227,500 103.57227,718.9415 281.05855,896.42773 500,896.42773 718.94145,896.42773 896.42773,718.9415 896.42773,500 896.42773,281.0586 718.94145,103.57227 500,103.57227 Z m -15.625,31.32031 0,89.70117 31.25,0 0,-89.70117 C 705.02438,142.85992 857.14008,294.9756 865.10742,484.375 l -89.70117,0 0,31.25 89.70117,0 C 857.14008,705.0244 705.02438,857.14008 515.625,865.10742 l 0,-89.70117 -31.25,0 0,89.70117 C 294.97562,857.14008 142.85992,705.0244 134.89258,515.625 l 89.70117,0 0,-31.25 -89.70117,0 C 142.85992,294.9756 294.97562,142.85992 484.375,134.89258 Z"
+       transform="translate(0,-3000)"
+       id="use5137"
+       inkscape:connector-curvature="0" />
+    <circle
+       style="opacity:0.65;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4510"
+       cx="337.5"
+       cy="-2781.4583"
+       r="25" />
+    <circle
+       cy="-2662.5"
+       cx="218.54175"
+       id="circle4512"
+       style="opacity:0.65;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       r="25" />
+    <circle
+       r="25"
+       style="opacity:0.65;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4536"
+       cx="218.54178"
+       cy="-2337.5" />
+    <circle
+       cy="-2218.5417"
+       cx="337.49994"
+       id="circle4538"
+       style="opacity:0.65;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       r="25" />
+    <circle
+       cy="-2218.5417"
+       cx="662.50006"
+       id="circle4540"
+       style="opacity:0.65;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       r="25" />
+    <circle
+       r="25"
+       style="opacity:0.65;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4542"
+       cx="781.45825"
+       cy="-2337.5" />
+    <circle
+       cy="-2662.5"
+       cx="781.45825"
+       id="circle4544"
+       style="opacity:0.65;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       r="25" />
+    <circle
+       r="25"
+       style="opacity:0.65;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4546"
+       cx="662.50006"
+       cy="-2781.4583" />
+  </g>
+</svg>
