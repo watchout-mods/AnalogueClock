@@ -39,6 +39,7 @@ luac.out
 *.x86_64
 *.hex
 
+.release/
 *.sublime-workspace
 Libs/Lib*
 Libs/Ace*
