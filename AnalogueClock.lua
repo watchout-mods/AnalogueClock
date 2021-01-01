@@ -12,7 +12,7 @@ local GameTimeFrame,      rad,      cos,      max, PI
 local TWOPI = PI * 2;
 local INVITE_PULSE_SEC = 1.0 / (2.0 * 1.0);
 local TWOPI_INVITE_PULSE_SEC = TWOPI * INVITE_PULSE_SEC;
-local tpath = "Interface\\Addons\\AnalogueClock\\Textures\\";
+local TEXTURE_PATH = "Interface\\Addons\\AnalogueClock\\Textures\\";
 local init_run = false;
 
 local size    = 32; -- Goldwatch
@@ -53,7 +53,7 @@ local function AnalogueClock_init(gtf, ... )
 	-- Border
 	local bg_inset = -4.2;
 	Addon.ClockBackground = frame:CreateTexture(nil, "BACKGROUND");
-	Addon.ClockBackground:SetTexture(tpath .. "Goldwatch");
+	Addon.ClockBackground:SetTexture(TEXTURE_PATH .. "Goldwatch");
 	Addon.ClockBackground:SetPoint("TOPLEFT", bg_inset, -bg_inset);
 	Addon.ClockBackground:SetPoint("BOTTOMRIGHT", -bg_inset, bg_inset);
 
@@ -67,19 +67,19 @@ local function AnalogueClock_init(gtf, ... )
 
 	-- Minute
 	Addon.MinuteHand = frame:CreateTexture(nil, "OVERLAY");
-	Addon.MinuteHand:SetTexture(tpath .. "MinuteHand");
+	Addon.MinuteHand:SetTexture(TEXTURE_PATH .. "MinuteHand");
 	Addon.MinuteHand:SetPoint("TOPLEFT", 3.5, -3.5);
 	Addon.MinuteHand:SetPoint("BOTTOMRIGHT", -3.5, 3.5);
 
 	-- Hour
 	Addon.HourHand = frame:CreateTexture(nil, "OVERLAY");
-	Addon.HourHand:SetTexture(tpath .. "HourHand");
+	Addon.HourHand:SetTexture(TEXTURE_PATH .. "HourHand");
 	Addon.HourHand:SetPoint("TOPLEFT", 3.5, -3.5);
 	Addon.HourHand:SetPoint("BOTTOMRIGHT", -3.5, 3.5);
 	
 	--[[ No Gloss
 	gtf.Gloss = frame:CreateTexture(nil, "OVERLAY");
-	gtf.Gloss:SetTexture(tpath.."Goldwatch_Glass");
+	gtf.Gloss:SetTexture(TEXTURE_PATH.."Goldwatch_Glass");
 	gtf.Gloss:SetTexCoord(0, 1, 0, 1);
 	gtf.Gloss:SetPoint("CENTER", gtf, "CENTER", offsetx, offsety);
 	gtf.Gloss:SetWidth(size + 20);
