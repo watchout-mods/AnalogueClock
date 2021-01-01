@@ -42,7 +42,7 @@ end
 
 ---
 -- @param self (frame) usually the GameTimeFrame
-local function AnalogueClock_init(gtf, ... )
+local function AnalogueClock_init(gtf, gtcig, gtcio, ... )
 	-- Create a base frame to attach all textures to
 	local frame = CreateFrame("button");
 	frame:SetPoint("TOPLEFT", gtf, "TOPLEFT", offsetx, offsety);
@@ -52,7 +52,7 @@ local function AnalogueClock_init(gtf, ... )
 
 	-- Border
 	local bg_inset = -4.2;
-	Addon.ClockBackground = frame:CreateTexture(nil, "BACKGROUND");
+	Addon.ClockBackground = frame:CreateTexture(nil, "BORDER");
 	Addon.ClockBackground:SetTexture(TEXTURE_PATH .. "Goldwatch");
 	Addon.ClockBackground:SetPoint("TOPLEFT", bg_inset, -bg_inset);
 	Addon.ClockBackground:SetPoint("BOTTOMRIGHT", -bg_inset, bg_inset);
@@ -66,17 +66,35 @@ local function AnalogueClock_init(gtf, ... )
 	Addon.ClockHighlight:SetBlendMode("ADD");
 
 	-- Minute
-	Addon.MinuteHand = frame:CreateTexture(nil, "OVERLAY");
+	Addon.MinuteHand = frame:CreateTexture(nil, "ARTWORK");
 	Addon.MinuteHand:SetTexture(TEXTURE_PATH .. "MinuteHand");
 	Addon.MinuteHand:SetPoint("TOPLEFT", 3.5, -3.5);
 	Addon.MinuteHand:SetPoint("BOTTOMRIGHT", -3.5, 3.5);
 
 	-- Hour
-	Addon.HourHand = frame:CreateTexture(nil, "OVERLAY");
+	Addon.HourHand = frame:CreateTexture(nil, "ARTWORK");
 	Addon.HourHand:SetTexture(TEXTURE_PATH .. "HourHand");
 	Addon.HourHand:SetPoint("TOPLEFT", 3.5, -3.5);
 	Addon.HourHand:SetPoint("BOTTOMRIGHT", -3.5, 3.5);
-	
+
+	do -- Invite glow
+		local inset, ox, oy  = -10, 0.75, 0.5;
+		frame._InviteGlow = frame:CreateTexture(nil, "BACKGROUND");
+		frame._InviteGlow:SetTexture(gtcig:GetTexture());
+		frame._InviteGlow:SetPoint("TOPLEFT", inset + ox, -inset + oy);
+		frame._InviteGlow:SetPoint("BOTTOMRIGHT", -inset + ox, inset + oy);
+		frame._InviteGlow:SetBlendMode("ADD");
+	end
+
+	do -- Invite overlay
+		local inset, ox, oy  = -0, 6, -1;
+		frame._InviteOverlay = frame:CreateTexture(nil, "OVERLAY");
+		frame._InviteOverlay:SetTexture(gtcio:GetTexture());
+		frame._InviteOverlay:SetPoint("TOPLEFT", inset + ox, -inset + oy);
+		frame._InviteOverlay:SetPoint("BOTTOMRIGHT", -inset + ox, inset + oy);
+		-- frame._InviteOverlay:SetBlendMode("ADD");
+	end
+
 	--[[ No Gloss
 	gtf.Gloss = frame:CreateTexture(nil, "OVERLAY");
 	gtf.Gloss:SetTexture(TEXTURE_PATH.."Goldwatch_Glass");
@@ -135,7 +153,7 @@ function AnalogueClock_update(self, ...)
 	end
 end
 
-local DT, flashTimer = 0, 0;
+local DT, FlashTimer = 0, 0;
 function AnalogueClock_onupdate(self, dt)
 	DT = DT + dt;
 	
@@ -146,28 +164,31 @@ function AnalogueClock_onupdate(self, dt)
 
 	-- Flashing stuff
 	if GameTimeFrame.flashInvite then
-		local flashIndex = TWOPI_INVITE_PULSE_SEC * self.flashTimer;
+		local flashIndex = TWOPI_INVITE_PULSE_SEC * FlashTimer;
 		local flashValue = 0.55 + 0.4 * cos(flashIndex);
 		if ( flashIndex >= TWOPI ) then
-			self.flashTimer = 0.0;
+			FlashTimer = 0.0;
 		else
-			self.flashTimer = self.flashTimer + dt;
+			FlashTimer = FlashTimer + dt;
 		end
 
-		GameTimeCalendarInvitesTexture:SetAlpha(flashValue);
-		GameTimeCalendarInvitesGlow:SetAlpha(flashValue);
+		self._InviteGlow:SetAlpha(flashValue);
+		self._InviteOverlay:SetAlpha(flashValue);
+	else
+		self._InviteGlow:SetAlpha(0);
+		self._InviteOverlay:SetAlpha(0);
 	end
 end
 
 function Addon:OnInitialize()
-	self.Frame = AnalogueClock_init(GameTimeFrame);
+	-- self.Frame = AnalogueClock_init(GameTimeFrame);
 end
 
 ---
 -- AceAddon on-enable handler
 function Addon:OnEnable()
 	if not init_run then
-		AnalogueClock_init(GameTimeFrame);
+		self.Frame = AnalogueClock_init(GameTimeFrame, GameTimeCalendarInvitesGlow, GameTimeCalendarInvitesTexture);
 	end
 
 	local gtf, backup = GameTimeFrame, {};
@@ -186,24 +207,24 @@ function Addon:OnEnable()
 	-- MODIFY
 
 	-- TODO: No idea how to undo, just hide and create own.
-	GameTimeCalendarInvitesGlow:SetDrawLayer("BACKGROUND");
-	GameTimeCalendarInvitesGlow:ClearAllPoints();
-	GameTimeCalendarInvitesGlow:SetPoint("CENTER", gtf, "CENTER", offsetx+1, offsety+1);
-	GameTimeCalendarInvitesGlow:SetWidth(size + 25);
-	GameTimeCalendarInvitesGlow:SetHeight(size + 25);
-	GameTimeCalendarInvitesTexture:SetDrawLayer("OVERLAY");
+	-- GameTimeCalendarInvitesGlow:SetDrawLayer("BACKGROUND");
+	-- GameTimeCalendarInvitesGlow:ClearAllPoints();
+	-- GameTimeCalendarInvitesGlow:SetPoint("CENTER", GameTimeFrame, "CENTER", offsetx+1, offsety+1);
+	-- GameTimeCalendarInvitesGlow:SetWidth(size + 25);
+	-- GameTimeCalendarInvitesGlow:SetHeight(size + 25);
+	-- GameTimeCalendarInvitesTexture:SetDrawLayer("OVERLAY");
 	
-	--gtf:SetPushedTexture(nil);
-	--gtf:SetNormalTexture(self.ClockBackground);
-	--gtf:SetHighlightTexture(self.ClockHighlight);
+	--GameTimeFrame:SetPushedTexture(nil);
+	--GameTimeFrame:SetNormalTexture(self.ClockBackground);
+	--GameTimeFrame:SetHighlightTexture(self.ClockHighlight);
 
-	gtf:SetScript("OnEnter" , AnalogueClock_onenter);
-	gtf:SetScript("OnUpdate", AnalogueClock_onupdate);
-	gtf:SetScript("OnClick" , AnalogueClock_onclick);
+	self.Frame:SetScript("OnEnter" , AnalogueClock_onenter);
+	self.Frame:SetScript("OnUpdate", AnalogueClock_onupdate);
+	self.Frame:SetScript("OnClick" , AnalogueClock_onclick);
 
-	gtf.DisableAnalogueClock = function() return self:Disable(); end
+	GameTimeFrame.DisableAnalogueClock = function() return self:Disable(); end
 	
-	AnalogueClock_update(gtf);
+	AnalogueClock_update(self.Frame);
 
 	-- Hide the Blizzard digital clock and calendar frames
 	GameTimeFrame:HookScript("OnShow", framehider);
