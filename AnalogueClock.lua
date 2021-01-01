@@ -19,67 +19,13 @@ local size    = 32; -- Goldwatch
 local offsetx = -1;
 local offsety =  1;
 
+Addon.Frame = nil;
+Addon.Initialized = false;
+
 ---
--- Hides the Blizzard digital clock.
-local function blizclockhider(self)
+-- Hides self.
+local function framehider(self)
 	self:Hide();
-end
-
----
--- @param self (frame) usually the GameTimeFrame
-local function AnalogueClock_init(self, ... )
-	-- Use existing bg-texture if possible and just adjust the view
-	Addon.ClockBackground = self:CreateTexture(nil, "BACKGROUND");
-	Addon.ClockBackground:SetTexture(tpath.."Goldwatch")
-	Addon.ClockBackground:SetTexCoord(0, 1, 0, 1);
-	Addon.ClockBackground:ClearAllPoints();
-	Addon.ClockBackground:SetPoint("CENTER", self, "CENTER", offsetx, offsety);
-	Addon.ClockBackground:SetWidth(size + 20);
-	Addon.ClockBackground:SetHeight(size + 20);
-	Addon.ClockBackground:SetDrawLayer("BACKGROUND");
-	
-	-- Use existing highlight-texture if possible and just adjust the view
-	Addon.ClockHighlight = self:CreateTexture(nil, "HIGHLIGHT");
-	Addon.ClockHighlight:ClearAllPoints();
-	Addon.ClockHighlight:SetPoint("CENTER", self, "CENTER", offsetx, offsety);
-	Addon.ClockHighlight:SetWidth(size + 10);
-	Addon.ClockHighlight:SetHeight(size + 10);
-	Addon.ClockHighlight:SetTexture(self:GetHighlightTexture():GetTexture());
-	
-	Addon.MinuteHand = self:CreateTexture(nil, "OVERLAY");
-	Addon.MinuteHand:SetTexture(tpath.."MinuteHand");
-	Addon.MinuteHand:SetPoint("CENTER", self, "CENTER", offsetx, offsety);
-	Addon.MinuteHand:SetWidth(size + 5);
-	Addon.MinuteHand:SetHeight(size + 5);
-	
-	Addon.HourHand = self:CreateTexture(nil, "OVERLAY");
-	Addon.HourHand:SetTexture(tpath.."HourHand");
-	Addon.HourHand:SetPoint("CENTER", self, "CENTER", offsetx, offsety);
-	Addon.HourHand:SetWidth(size + 5);
-	Addon.HourHand:SetHeight(size + 5);
-	
-	--[[ No Gloss
-	self.Gloss = self:CreateTexture(nil, "OVERLAY");
-	self.Gloss:SetTexture(tpath.."Goldwatch_Glass");
-	self.Gloss:SetTexCoord(0, 1, 0, 1);
-	self.Gloss:SetPoint("CENTER", self, "CENTER", offsetx, offsety);
-	self.Gloss:SetWidth(size + 20);
-	self.Gloss:SetHeight(size + 20);
-	self.Gloss:SetBlendMode("ADD");
-	--]]
-	
-	-- adjust position of date display - TODO - Disabled for now
-	if false and self:GetFontString() then
-		local f = self:GetFontString();
-		f:ClearAllPoints();
-		f:SetPoint("CENTER", self, "CENTER", offsetx-1, offsety-5);
-		f:SetJustifyH("CENTER");
-		local ff = f:GetFont();
-		f:SetFont(ff, 9);
-		f:SetTextColor(1, 0, 0, 1);
-	end
-
-	init_run = true;
 end
 
 function AnalogueClock_onclick(self, button)
@@ -90,8 +36,72 @@ function AnalogueClock_onclick(self, button)
 	elseif button == "MiddleButton" then
 		-- placeholder
 	else -- left click
-		GameTimeFrame_OnClick(self);
+		GameTimeFrame_OnClick(GameTimeFrame);
 	end
+end
+
+---
+-- @param self (frame) usually the GameTimeFrame
+local function AnalogueClock_init(gtf, ... )
+	-- Create a base frame to attach all textures to
+	local frame = CreateFrame("button");
+	frame:SetPoint("TOPLEFT", gtf, "TOPLEFT", offsetx, offsety);
+	frame:SetWidth(size);
+	frame:SetHeight(size);
+	frame:RegisterForClicks("LeftButtonUp", "RightButtonUp", "MiddleButtonUp");
+
+	-- Border
+	local bg_inset = -4.2;
+	Addon.ClockBackground = frame:CreateTexture(nil, "BACKGROUND");
+	Addon.ClockBackground:SetTexture(tpath .. "Goldwatch");
+	Addon.ClockBackground:SetPoint("TOPLEFT", bg_inset, -bg_inset);
+	Addon.ClockBackground:SetPoint("BOTTOMRIGHT", -bg_inset, bg_inset);
+
+	-- Mouse-over highlight
+	local highlight_inset = 0;
+	Addon.ClockHighlight = frame:CreateTexture(nil, "HIGHLIGHT");
+	Addon.ClockHighlight:SetPoint("TOPLEFT", -highlight_inset, highlight_inset - 1);
+	Addon.ClockHighlight:SetPoint("BOTTOMRIGHT", highlight_inset, -highlight_inset - 1);
+	Addon.ClockHighlight:SetTexture(gtf:GetHighlightTexture():GetTexture());
+	Addon.ClockHighlight:SetBlendMode("ADD");
+
+	-- Minute
+	Addon.MinuteHand = frame:CreateTexture(nil, "OVERLAY");
+	Addon.MinuteHand:SetTexture(tpath .. "MinuteHand");
+	Addon.MinuteHand:SetPoint("TOPLEFT", 3.5, -3.5);
+	Addon.MinuteHand:SetPoint("BOTTOMRIGHT", -3.5, 3.5);
+
+	-- Hour
+	Addon.HourHand = frame:CreateTexture(nil, "OVERLAY");
+	Addon.HourHand:SetTexture(tpath .. "HourHand");
+	Addon.HourHand:SetPoint("TOPLEFT", 3.5, -3.5);
+	Addon.HourHand:SetPoint("BOTTOMRIGHT", -3.5, 3.5);
+	
+	--[[ No Gloss
+	gtf.Gloss = frame:CreateTexture(nil, "OVERLAY");
+	gtf.Gloss:SetTexture(tpath.."Goldwatch_Glass");
+	gtf.Gloss:SetTexCoord(0, 1, 0, 1);
+	gtf.Gloss:SetPoint("CENTER", gtf, "CENTER", offsetx, offsety);
+	gtf.Gloss:SetWidth(size + 20);
+	gtf.Gloss:SetHeight(size + 20);
+	gtf.Gloss:SetBlendMode("ADD");
+	--]]
+
+	-- adjust position of date display - TODO - Disabled for now
+	if false and gtf:GetFontString() then
+		local f = gtf:GetFontString();
+		f:ClearAllPoints();
+		f:SetPoint("CENTER", gtf, "CENTER", offsetx-1, offsety-5);
+		f:SetJustifyH("CENTER");
+		local ff = f:GetFont();
+		f:SetFont(ff, 9);
+		f:SetTextColor(1, 0, 0, 1);
+	end
+
+	frame:SetScript("OnClick" , AnalogueClock_onclick);
+
+	init_run = true;
+	return frame;
 end
 
 function AnalogueClock_onenter(self, ...)
@@ -125,9 +135,9 @@ function AnalogueClock_update(self, ...)
 	end
 end
 
-local DT, flashTimer = 0,0;
+local DT, flashTimer = 0, 0;
 function AnalogueClock_onupdate(self, dt)
-	DT = DT+dt;
+	DT = DT + dt;
 	
 	if DT > 20 then
 		AnalogueClock_update(self);
@@ -137,7 +147,7 @@ function AnalogueClock_onupdate(self, dt)
 	-- Flashing stuff
 	if GameTimeFrame.flashInvite then
 		local flashIndex = TWOPI_INVITE_PULSE_SEC * self.flashTimer;
-		local flashValue = 0.55 + 0.4*cos(flashIndex);
+		local flashValue = 0.55 + 0.4 * cos(flashIndex);
 		if ( flashIndex >= TWOPI ) then
 			self.flashTimer = 0.0;
 		else
@@ -149,11 +159,8 @@ function AnalogueClock_onupdate(self, dt)
 	end
 end
 
----
--- AceAddon on-disable handler
-function Addon:OnDisable()
-	local self, this, backup = GameTimeFrame, self, {};
-	self.DisableAnalogueClock = nil;
+function Addon:OnInitialize()
+	self.Frame = AnalogueClock_init(GameTimeFrame);
 end
 
 ---
@@ -186,9 +193,9 @@ function Addon:OnEnable()
 	GameTimeCalendarInvitesGlow:SetHeight(size + 25);
 	GameTimeCalendarInvitesTexture:SetDrawLayer("OVERLAY");
 	
-	gtf:SetPushedTexture(nil);
-	gtf:SetNormalTexture(self.ClockBackground);
-	gtf:SetHighlightTexture(self.ClockHighlight);
+	--gtf:SetPushedTexture(nil);
+	--gtf:SetNormalTexture(self.ClockBackground);
+	--gtf:SetHighlightTexture(self.ClockHighlight);
 
 	gtf:SetScript("OnEnter" , AnalogueClock_onenter);
 	gtf:SetScript("OnUpdate", AnalogueClock_onupdate);
@@ -197,9 +204,11 @@ function Addon:OnEnable()
 	gtf.DisableAnalogueClock = function() return self:Disable(); end
 	
 	AnalogueClock_update(gtf);
-	
-	-- Hide the Blizzard digital clock
-	TimeManagerClockButton:HookScript("OnShow", blizclockhider);
+
+	-- Hide the Blizzard digital clock and calendar frames
+	GameTimeFrame:HookScript("OnShow", framehider);
+	GameTimeFrame:Hide();
+	TimeManagerClockButton:HookScript("OnShow", framehider);
 	TimeManagerClockButton:Hide();
 
 	--@alpha@
@@ -208,4 +217,10 @@ function Addon:OnEnable()
 		"the |cFF00AA00Release|r version if you don't want to be bothered by "..
 		"these.");
 	--@end-alpha@
+end
+
+---
+-- AceAddon on-disable handler
+function Addon:OnDisable()
+	GameTimeFrame.DisableAnalogueClock = nil;
 end
