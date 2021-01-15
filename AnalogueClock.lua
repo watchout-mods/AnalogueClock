@@ -95,7 +95,6 @@ function AnalogueClock_init(parent, gtf, gtcig, gtcio, ... )
 		frame._InviteOverlay:SetTexture(gtcio:GetTexture());
 		frame._InviteOverlay:SetPoint("TOPLEFT", inset + ox, -inset + oy);
 		frame._InviteOverlay:SetPoint("BOTTOMRIGHT", -inset + ox, inset + oy);
-		-- frame._InviteOverlay:SetBlendMode("ADD");
 	end
 
 	--[[ No Gloss
@@ -119,14 +118,16 @@ function AnalogueClock_init(parent, gtf, gtcig, gtcio, ... )
 		f:SetTextColor(1, 0, 0, 1);
 	end
 
-	frame:SetScript("OnClick" , AnalogueClock_onclick);
+	frame:SetScript("OnClick", AnalogueClock_onclick);
+	frame:SetScript("OnEnter", AnalogueClock_onenter);
+	frame:SetScript("OnUpdate", AnalogueClock_onupdate);
 
 	init_run = true;
 	return frame;
 end
 
 function AnalogueClock_onenter(self, ...)
-	Addon.Backup.OnEnter(self, ...); -- run bliz function
+	GameTimeFrame:GetScript("OnEnter")(self, ...); -- run bliz function
 	AnalogueClock_update(self, ...);
 end
 
@@ -195,41 +196,10 @@ function Addon:OnEnable()
 	if not init_run then
 		self.Frame = AnalogueClock_init(MinimapCluster, GameTimeFrame, GameTimeCalendarInvitesGlow,
 			GameTimeCalendarInvitesTexture);
+
+		MinimapCluster.DisableAnalogueClock = function() return self:Disable(); end
 	end
 
-	local gtf, backup = GameTimeFrame, {};
-	self.Backup = backup;
-
-	-- Backup current status
-	--
-	backup.PushedTexture = gtf:GetPushedTexture();
-	backup.NormalTexture = gtf:GetNormalTexture();
-	backup.HighTexture   = gtf:GetHighlightTexture();
-	backup.OnEnter       = gtf:GetScript("OnEnter");
-	backup.OnClick       = gtf:GetScript("OnClick");
-	backup.OnUpdate      = gtf:GetScript("OnUpdate");
-	backup.TMOnShow      = TimeManagerClockButton:GetScript("OnShow");
-
-	-- MODIFY
-
-	-- TODO: No idea how to undo, just hide and create own.
-	-- GameTimeCalendarInvitesGlow:SetDrawLayer("BACKGROUND");
-	-- GameTimeCalendarInvitesGlow:ClearAllPoints();
-	-- GameTimeCalendarInvitesGlow:SetPoint("CENTER", GameTimeFrame, "CENTER", offsetx+1, offsety+1);
-	-- GameTimeCalendarInvitesGlow:SetWidth(size + 25);
-	-- GameTimeCalendarInvitesGlow:SetHeight(size + 25);
-	-- GameTimeCalendarInvitesTexture:SetDrawLayer("OVERLAY");
-	
-	--GameTimeFrame:SetPushedTexture(nil);
-	--GameTimeFrame:SetNormalTexture(self.ClockBackground);
-	--GameTimeFrame:SetHighlightTexture(self.ClockHighlight);
-
-	self.Frame:SetScript("OnEnter" , AnalogueClock_onenter);
-	self.Frame:SetScript("OnUpdate", AnalogueClock_onupdate);
-	self.Frame:SetScript("OnClick" , AnalogueClock_onclick);
-
-	GameTimeFrame.DisableAnalogueClock = function() return self:Disable(); end
-	
 	AnalogueClock_update(self.Frame);
 
 	-- Hide the Blizzard digital clock and calendar frames
