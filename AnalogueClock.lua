@@ -28,7 +28,7 @@ local function framehider(self)
 	self:Hide();
 end
 
-function AnalogueClock_onclick(self, button)
+local function AnalogueClock_onclick(self, button)
 	if button == "RightButton" then
 		-- load the time manager addon
 		LoadAddOn("Blizzard_TimeManager");
@@ -42,9 +42,9 @@ end
 
 ---
 -- @param self (frame) usually the GameTimeFrame
-local function AnalogueClock_init(gtf, gtcig, gtcio, ... )
+local function AnalogueClock_init(parent, gtf, gtcig, gtcio, ... )
 	-- Create a base frame to attach all textures to
-	local frame = CreateFrame("button");
+	local frame = CreateFrame("button", "AnalogueClock", parent);
 	frame:SetPoint("TOPLEFT", gtf, "TOPLEFT", offsetx, offsety);
 	frame:SetWidth(size);
 	frame:SetHeight(size);
@@ -122,12 +122,12 @@ local function AnalogueClock_init(gtf, gtcig, gtcio, ... )
 	return frame;
 end
 
-function AnalogueClock_onenter(self, ...)
+local function AnalogueClock_onenter(self, ...)
 	Addon.Backup.OnEnter(self, ...); -- run bliz function
 	AnalogueClock_update(self, ...);
 end
 
-function AnalogueClock_update(self, ...)
+local function AnalogueClock_update(self, ...)
 	local hour, minute;
 	if GetCVarBool("timeMgrUseLocalTime") then
 		hour, minute = tonumber(date("%H")), tonumber(date("%M"));
@@ -154,7 +154,7 @@ function AnalogueClock_update(self, ...)
 end
 
 local DT, FlashTimer = 0, 0;
-function AnalogueClock_onupdate(self, dt)
+local function AnalogueClock_onupdate(self, dt)
 	DT = DT + dt;
 	
 	if DT > 20 then
@@ -188,7 +188,8 @@ end
 -- AceAddon on-enable handler
 function Addon:OnEnable()
 	if not init_run then
-		self.Frame = AnalogueClock_init(GameTimeFrame, GameTimeCalendarInvitesGlow, GameTimeCalendarInvitesTexture);
+		self.Frame = AnalogueClock_init(MinimapCluster, GameTimeFrame, GameTimeCalendarInvitesGlow,
+			GameTimeCalendarInvitesTexture);
 	end
 
 	local gtf, backup = GameTimeFrame, {};
