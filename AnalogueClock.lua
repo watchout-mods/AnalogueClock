@@ -156,7 +156,7 @@ function AnalogueClock_update(self, ...)
 	end
 end
 
-local DT, FlashTimer = 0, 0;
+local DT, FlashTimer, IsFlashing = 0, 0, true;
 function AnalogueClock_onupdate(self, dt)
 	DT = DT + dt;
 	
@@ -177,9 +177,11 @@ function AnalogueClock_onupdate(self, dt)
 
 		self._InviteGlow:SetAlpha(flashValue);
 		self._InviteOverlay:SetAlpha(flashValue);
-	else
+		IsFlashing = true;
+	elseif IsFlashing then
 		self._InviteGlow:SetAlpha(0);
 		self._InviteOverlay:SetAlpha(0);
+		IsFlashing = false;
 	end
 end
 
