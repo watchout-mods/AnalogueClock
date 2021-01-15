@@ -15,7 +15,7 @@ local TWOPI_INVITE_PULSE_SEC = TWOPI * INVITE_PULSE_SEC;
 local TEXTURE_PATH = "Interface\\Addons\\AnalogueClock\\Textures\\";
 local init_run = false;
 
-local size    = 32; -- Goldwatch
+local size    = 40; -- Goldwatch
 local offsetx = -1;
 local offsety =  1;
 
@@ -194,7 +194,7 @@ end
 -- AceAddon on-enable handler
 function Addon:OnEnable()
 	if not init_run then
-		self.Frame = AnalogueClock_init(MinimapCluster, GameTimeFrame, GameTimeCalendarInvitesGlow,
+		self.Frame = AnalogueClock_init(MinimapBackdrop, GameTimeFrame, GameTimeCalendarInvitesGlow,
 			GameTimeCalendarInvitesTexture);
 
 		MinimapCluster.DisableAnalogueClock = function() return self:Disable(); end
