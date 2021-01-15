@@ -186,7 +186,7 @@ function AnalogueClock_onupdate(self, dt)
 end
 
 function Addon:OnInitialize()
-	-- self.Frame = AnalogueClock_init(GameTimeFrame);
+	-- Cannot init frame here because Blizzard frames may not be loaded yet.
 end
 
 ---
