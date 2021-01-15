@@ -19,6 +19,9 @@ local size    = 32; -- Goldwatch
 local offsetx = -1;
 local offsety =  1;
 
+local AnalogueClock_onclick, AnalogueClock_init, AnalogueClock_update, AnalogueClock_onenter,
+	AnalogueClock_onupdate;
+
 Addon.Frame = nil;
 Addon.Initialized = false;
 
@@ -28,7 +31,7 @@ local function framehider(self)
 	self:Hide();
 end
 
-local function AnalogueClock_onclick(self, button)
+function AnalogueClock_onclick(self, button)
 	if button == "RightButton" then
 		-- load the time manager addon
 		LoadAddOn("Blizzard_TimeManager");
@@ -42,7 +45,7 @@ end
 
 ---
 -- @param self (frame) usually the GameTimeFrame
-local function AnalogueClock_init(parent, gtf, gtcig, gtcio, ... )
+function AnalogueClock_init(parent, gtf, gtcig, gtcio, ... )
 	-- Create a base frame to attach all textures to
 	local frame = CreateFrame("button", "AnalogueClock", parent);
 	frame:SetPoint("TOPLEFT", gtf, "TOPLEFT", offsetx, offsety);
@@ -122,12 +125,12 @@ local function AnalogueClock_init(parent, gtf, gtcig, gtcio, ... )
 	return frame;
 end
 
-local function AnalogueClock_onenter(self, ...)
+function AnalogueClock_onenter(self, ...)
 	Addon.Backup.OnEnter(self, ...); -- run bliz function
 	AnalogueClock_update(self, ...);
 end
 
-local function AnalogueClock_update(self, ...)
+function AnalogueClock_update(self, ...)
 	local hour, minute;
 	if GetCVarBool("timeMgrUseLocalTime") then
 		hour, minute = tonumber(date("%H")), tonumber(date("%M"));
@@ -154,7 +157,7 @@ local function AnalogueClock_update(self, ...)
 end
 
 local DT, FlashTimer = 0, 0;
-local function AnalogueClock_onupdate(self, dt)
+function AnalogueClock_onupdate(self, dt)
 	DT = DT + dt;
 	
 	if DT > 20 then
