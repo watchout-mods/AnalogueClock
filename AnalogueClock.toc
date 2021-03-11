@@ -1,4 +1,4 @@
-## Interface: 90002
+## Interface: 90005
 ## Title: AnalogueClock
 ## Version: @project-version@
 ## Notes: Analogue clock for the minimap |cFFAAAAAAby watchout@curse.com|r
@@ -7,7 +7,7 @@
 ## X-LoadOn-Always: delayed
 ## X-Curse-Project-ID: 30511
 
-## Libraries
+# Libraries
 Libs\embed.xml
 
 AnalogueClock.lua
