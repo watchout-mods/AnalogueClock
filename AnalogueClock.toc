@@ -1,7 +1,7 @@
-## Interface: 90105
+## Interface: 100002
 ## Title: AnalogueClock
 ## Version: @project-version@
-## Notes: Analogue clock for the minimap |cFFAAAAAAby watchout@curse.com|r
+## Notes: Analogue clock for the minimap |cFFAAAAAAby watchout_cf@curse.com|r
 ## SavedVariables: AnalogueClock_Settings
 ## LoadManagers: AddonLoader, LoadIT
 ## X-LoadOn-Always: delayed

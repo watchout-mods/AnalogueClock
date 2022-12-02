@@ -15,9 +15,9 @@ local TWOPI_INVITE_PULSE_SEC = TWOPI * INVITE_PULSE_SEC;
 local TEXTURE_PATH = "Interface\\Addons\\AnalogueClock\\Textures\\";
 local init_run = false;
 
-local size    = 40; -- Goldwatch
-local offsetx = -1;
-local offsety =  1;
+local size    = 44; -- Goldwatch
+local offsetx = -5;
+local offsety = -5;
 
 local AnalogueClock_onclick, AnalogueClock_init, AnalogueClock_update, AnalogueClock_onenter,
 	AnalogueClock_onupdate;
@@ -48,7 +48,8 @@ end
 function AnalogueClock_init(parent, gtf, gtcig, gtcio, ... )
 	-- Create a base frame to attach all textures to
 	local frame = CreateFrame("button", "AnalogueClock", parent);
-	frame:SetPoint("TOPLEFT", gtf, "TOPLEFT", offsetx, offsety);
+	frame:SetPoint("TOPRIGHT", parent, "TOPRIGHT", offsetx, offsety);
+	frame:SetFrameStrata("MEDIUM");
 	frame:SetWidth(size);
 	frame:SetHeight(size);
 	frame:RegisterForClicks("LeftButtonUp", "RightButtonUp", "MiddleButtonUp");
@@ -56,7 +57,7 @@ function AnalogueClock_init(parent, gtf, gtcig, gtcio, ... )
 	-- Border
 	local bg_inset = -4.2;
 	Addon.ClockBackground = frame:CreateTexture(nil, "BORDER");
-	Addon.ClockBackground:SetTexture(TEXTURE_PATH .. "Goldwatch");
+	Addon.ClockBackground:SetTexture(TEXTURE_PATH .. "10-Dragonflight");
 	Addon.ClockBackground:SetPoint("TOPLEFT", bg_inset, -bg_inset);
 	Addon.ClockBackground:SetPoint("BOTTOMRIGHT", -bg_inset, bg_inset);
 
@@ -194,7 +195,7 @@ end
 -- AceAddon on-enable handler
 function Addon:OnEnable()
 	if not init_run then
-		self.Frame = AnalogueClock_init(MinimapBackdrop, GameTimeFrame, GameTimeCalendarInvitesGlow,
+		self.Frame = AnalogueClock_init(Minimap, GameTimeFrame, GameTimeCalendarInvitesGlow,
 			GameTimeCalendarInvitesTexture);
 
 		MinimapCluster.DisableAnalogueClock = function() return self:Disable(); end
