@@ -66,25 +66,27 @@ function AnalogueClock_init(parent, gtf, gtcig, gtcio, ... )
 	Addon.ClockHighlight = frame:CreateTexture(nil, "HIGHLIGHT");
 	Addon.ClockHighlight:SetPoint("TOPLEFT", -highlight_inset, highlight_inset - 1);
 	Addon.ClockHighlight:SetPoint("BOTTOMRIGHT", highlight_inset, -highlight_inset - 1);
-	Addon.ClockHighlight:SetTexture(gtf:GetHighlightTexture():GetTexture());
+	Addon.ClockHighlight:SetAtlas("GarrLanding-CircleGlow");
 	Addon.ClockHighlight:SetBlendMode("ADD");
 
 	-- Minute
+	local minute_inset = 5.0;
 	Addon.MinuteHand = frame:CreateTexture(nil, "ARTWORK");
 	Addon.MinuteHand:SetTexture(TEXTURE_PATH .. "MinuteHand");
-	Addon.MinuteHand:SetPoint("TOPLEFT", 3.5, -3.5);
-	Addon.MinuteHand:SetPoint("BOTTOMRIGHT", -3.5, 3.5);
+	Addon.MinuteHand:SetPoint("TOPLEFT", minute_inset, -minute_inset);
+	Addon.MinuteHand:SetPoint("BOTTOMRIGHT", -minute_inset, minute_inset);
 
 	-- Hour
+	local hour_inset = 5.0;
 	Addon.HourHand = frame:CreateTexture(nil, "ARTWORK");
 	Addon.HourHand:SetTexture(TEXTURE_PATH .. "HourHand");
-	Addon.HourHand:SetPoint("TOPLEFT", 3.5, -3.5);
-	Addon.HourHand:SetPoint("BOTTOMRIGHT", -3.5, 3.5);
+	Addon.HourHand:SetPoint("TOPLEFT", hour_inset, -hour_inset);
+	Addon.HourHand:SetPoint("BOTTOMRIGHT", -hour_inset, hour_inset);
 
 	do -- Invite glow
 		local inset, ox, oy  = -10, 0.75, 0.5;
 		frame._InviteGlow = frame:CreateTexture(nil, "BACKGROUND");
-		frame._InviteGlow:SetTexture(gtcig:GetTexture());
+		frame._InviteGlow:SetAtlas("GarrLanding-CircleGlow");
 		frame._InviteGlow:SetPoint("TOPLEFT", inset + ox, -inset + oy);
 		frame._InviteGlow:SetPoint("BOTTOMRIGHT", -inset + ox, inset + oy);
 		frame._InviteGlow:SetBlendMode("ADD");
@@ -93,7 +95,7 @@ function AnalogueClock_init(parent, gtf, gtcig, gtcio, ... )
 	do -- Invite overlay
 		local inset, ox, oy  = -0, 6, -1;
 		frame._InviteOverlay = frame:CreateTexture(nil, "OVERLAY");
-		frame._InviteOverlay:SetTexture(gtcio:GetTexture());
+		frame._InviteOverlay:SetTexture("Interface\\Calendar\\EventNotification");
 		frame._InviteOverlay:SetPoint("TOPLEFT", inset + ox, -inset + oy);
 		frame._InviteOverlay:SetPoint("BOTTOMRIGHT", -inset + ox, inset + oy);
 	end
