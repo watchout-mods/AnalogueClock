@@ -1,4 +1,4 @@
-## Interface: 100002
+## Interface: 100005
 ## Title: AnalogueClock
 ## Version: @project-version@
 ## Notes: Analogue clock for the minimap |cFFAAAAAAby watchout_cf@curse.com|r
