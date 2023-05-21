@@ -43,3 +43,4 @@ luac.out
 *.sublime-workspace
 Libs/Lib*
 Libs/Ace*
+Textures/*.png
