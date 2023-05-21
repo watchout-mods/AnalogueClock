@@ -1,7 +1,8 @@
-## Interface: 100005
+## Interface: 100100
 ## Title: AnalogueClock
 ## Version: @project-version@
 ## Notes: Analogue clock for the minimap |cFFAAAAAAby watchout_cf@curse.com|r
+## IconTexture: Interface\AddOns\AnalogueClock\Textures\Clock-Icon
 ## SavedVariables: AnalogueClock_Settings
 ## LoadManagers: AddonLoader, LoadIT
 ## X-LoadOn-Always: delayed
